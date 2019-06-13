@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var allDice = [#imageLiteral(resourceName: "Kismet-Ace"), #imageLiteral(resourceName: "Kismet-Deuce"), #imageLiteral(resourceName: "Kismet-Trey"), #imageLiteral(resourceName: "Kismet-Four"), #imageLiteral(resourceName: "Kismet-Five"), #imageLiteral(resourceName: "Kismet-Six")]
     var randomDiceIndex: Int = 0
     var score: Int = 0
+    var attempts = 0
     
 
     override func viewDidLoad() {
@@ -48,11 +49,24 @@ class ViewController: UIViewController {
         if (randomDiceIndex == 0) {
             message.text = "You lose. Sorreh."
             score = 0
+            attemptCounter()
         } else if (score >= 21) {
             message.text = "You win. Alrigh'."
             score = 0
+            attemptCounter()
         } else {
             return
+        }
+    }
+    
+    func attemptCounter() {
+        attempts += 1
+        if (attempts == 1)
+        {
+            print("You have had \(attempts) attempt.")
+        }
+        else {
+        print("You have had \(attempts) attempts.")
         }
     }
     
