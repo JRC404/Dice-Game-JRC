@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rollButtonFunction(_ sender: Any) {// why Any?
-    
+    // the rollButtonFunction
         message.text = " "
         randomDiceIndex = Int.random(in: 0 ... 5) // what is this doing?
         diceImage.image = allDice[randomDiceIndex]
