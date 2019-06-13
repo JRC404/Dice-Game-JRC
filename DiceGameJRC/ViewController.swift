@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     }
     
     func rollLogic() {
+        // the dice roll logic.
         if (randomDiceIndex == 0) {
             message.text = "You lose. Sorreh."
             score = 0
