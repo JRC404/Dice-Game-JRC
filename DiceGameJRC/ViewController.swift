@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     }
     
     func messageLoad() {
+        // every label and button that is modified on load.
         message.text = "Let's go."
         totalScore.text = "0"
         mainText.text = "Welcome to the Dice game."
