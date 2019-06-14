@@ -37,8 +37,15 @@ func totalWinCounterFunction() {
 
 func successRateCounterFunction() {
     successRateCounter = ((totalWinCounter / attempts) * 100).rounded(.toNearestOrEven)
-    print("\(successRateCounter)%")
+    //print("\(successRateCounter)%")
     
+}
+
+func resetAllStatistics() {
+    attempts = 0.0
+    totalWinCounter = 0.0
+    successRateCounter = 0.0
+    print("All statistics reset.")
 }
 
 

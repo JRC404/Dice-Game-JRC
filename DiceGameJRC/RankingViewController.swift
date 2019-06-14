@@ -16,6 +16,9 @@ class RankingViewController: UIViewController {
     @IBOutlet weak var TotalWinCounterLabel: UILabel!
     @IBOutlet weak var successRateCounterLabel: UILabel!
     
+    @IBAction func AlertButton(_ sender: Any) {
+        print("Print.")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +50,22 @@ class RankingViewController: UIViewController {
         {
             successRateCounterLabel.text = "Your success rate is quite low at \(Int(successRateCounter))%"
         }
-        else if (successRateCounter < 100) {
+        else if (successRateCounter <= 100) {
             successRateCounterLabel.text = "Your success rate is \(Int(successRateCounter))%. That is pretty damn good."
         }
         else
         {
-            print("Hello.")
+            successRateCounterLabel.text = "You haven't won a game yet."
         }
+    }
+    
+    // MARK: Reset
+    
+    @IBAction func resetButton(_ sender: Any) {
+        resetAllStatistics()
+        successRateRun()
+        rankingRun()
+        totalWinRun()
     }
     
 }
