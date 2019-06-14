@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161F511222B272C8005FCA32 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161F511122B272C8005FCA32 /* SettingsViewController.swift */; };
+		161F511622B273EE005FCA32 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161F511522B273EE005FCA32 /* functions.swift */; };
+		161F511822B285D5005FCA32 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161F511722B285D5005FCA32 /* RankingViewController.swift */; };
 		167644ED229ECFF1005CE577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167644EC229ECFF1005CE577 /* AppDelegate.swift */; };
 		167644EF229ECFF1005CE577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167644EE229ECFF1005CE577 /* ViewController.swift */; };
 		167644F2229ECFF1005CE577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167644F0229ECFF1005CE577 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161F511122B272C8005FCA32 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		161F511522B273EE005FCA32 /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		161F511722B285D5005FCA32 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		167644E9229ECFF1005CE577 /* DiceGameJRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceGameJRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167644EC229ECFF1005CE577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167644EE229ECFF1005CE577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		161F511922B2860C005FCA32 /* Functions etc */ = {
+			isa = PBXGroup;
+			children = (
+				161F511522B273EE005FCA32 /* functions.swift */,
+			);
+			path = "Functions etc";
+			sourceTree = "<group>";
+		};
 		167644E0229ECFF1005CE577 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +113,13 @@
 			children = (
 				167644EC229ECFF1005CE577 /* AppDelegate.swift */,
 				167644EE229ECFF1005CE577 /* ViewController.swift */,
+				161F511122B272C8005FCA32 /* SettingsViewController.swift */,
+				161F511722B285D5005FCA32 /* RankingViewController.swift */,
 				167644F0229ECFF1005CE577 /* Main.storyboard */,
 				167644F3229ECFF3005CE577 /* Assets.xcassets */,
 				167644F5229ECFF3005CE577 /* LaunchScreen.storyboard */,
 				167644F8229ECFF3005CE577 /* Info.plist */,
+				161F511922B2860C005FCA32 /* Functions etc */,
 			);
 			path = DiceGameJRC;
 			sourceTree = "<group>";
@@ -256,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161F511822B285D5005FCA32 /* RankingViewController.swift in Sources */,
 				167644EF229ECFF1005CE577 /* ViewController.swift in Sources */,
 				167644ED229ECFF1005CE577 /* AppDelegate.swift in Sources */,
+				161F511222B272C8005FCA32 /* SettingsViewController.swift in Sources */,
+				161F511622B273EE005FCA32 /* functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55CR5JQ5TC;
 				INFOPLIST_FILE = DiceGameJRC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CN.DiceGameJRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55CR5JQ5TC;
 				INFOPLIST_FILE = DiceGameJRC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CN.DiceGameJRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

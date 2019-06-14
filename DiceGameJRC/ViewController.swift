@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // IBOutlets
+    // MARK: Outlets
     
     @IBOutlet weak var diceImage: UIImageView!
     @IBOutlet weak var totalScore: UILabel!
@@ -24,13 +24,14 @@ class ViewController: UIViewController {
     var allDice = [#imageLiteral(resourceName: "Kismet-Ace"), #imageLiteral(resourceName: "Kismet-Deuce"), #imageLiteral(resourceName: "Kismet-Trey"), #imageLiteral(resourceName: "Kismet-Four"), #imageLiteral(resourceName: "Kismet-Five"), #imageLiteral(resourceName: "Kismet-Six")]
     var randomDiceIndex: Int = 0
     var score: Int = 0
-    var attempts = 0
+    // var attempts = 0
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         messageLoad()
+        
         
     }
     
@@ -54,21 +55,22 @@ class ViewController: UIViewController {
             message.text = "You win. Alrigh'."
             score = 0
             attemptCounter()
+            totalWinCounterFunction()
         } else {
             return
         }
     }
     
-    func attemptCounter() {
-        attempts += 1
-        if (attempts == 1)
-        {
-            print("You have had \(attempts) attempt.")
-        }
-        else {
-        print("You have had \(attempts) attempts.")
-        }
-    }
+//    func attemptCounter() {
+//        attempts += 1
+//        if (attempts == 1)
+//        {
+//            print("You have had \(attempts) attempt.")
+//        }
+//        else {
+//        print("You have had \(attempts) attempts.")
+//        }
+//    }
     
     func messageLoad() {
         // every label and button that is modified on load.
